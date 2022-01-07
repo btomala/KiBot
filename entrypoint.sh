@@ -107,19 +107,19 @@ function args_process {
     do
        case "$1" in
            -c | --config ) shift
-               CONFIG="$1"
+               CONFIG="\"$1\""
                ;;
            -b | --board ) shift
-               BOARD="-b $1"
+               BOARD="-b \"$1\""
                ;;
            -e | --schematic ) shift
-               SCHEMA="-e $1"
+               SCHEMA="-e \"$1\""
                ;;
            -d | --dir) shift
-               DIR="-d $1"
+               DIR="-d \"$1\""
                ;;
            -s | --skip) shift
-               SKIP="-s $1"
+               SKIP="-s \"$1\""
                ;;
            -v | --verbose) shift
                if [ "$1" == "0" ]; then
